@@ -30,11 +30,15 @@ const closeSidebar = () => {
 </script>
 
 <template>
-    <div class="fixed top-0 left-0 w-72 h-full bg-[#ccc] z-50" :class="!open && 'hidden'">
+    <div
+        class="fixed -top-1 left-0 w-80 bg-grey z-[1000] lg:left-0"
+        :class="!open && 'hidden'"
+        style="height: 100vh"
+    >
         <header class="flex justify-between items-center w-full h-20 py-8 px-4">
             <div class="flex items-center gap-2">
                 <RouterLink to="/">
-                    <div class="icon">
+                    <div class="icon" v-on:click="closeSidebar">
                         <ion-icon name="arrow-back-outline" class="text-3xl"></ion-icon>
                     </div>
                 </RouterLink>

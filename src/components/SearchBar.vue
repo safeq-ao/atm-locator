@@ -2,7 +2,7 @@
 import OpenSidebar from '@/components/OpenSidebar.vue'
 </script>
 <template>
-    <div class="flex justify-between items-center bg-white w-[20.5rem] h-14 rounded-lg mx-auto p-1">
+    <div class="flex justify-between items-center bg-white w-[20.5rem] h-14 rounded-lg p-1">
         <OpenSidebar />
 
         <form action="" class="flex items-center gap-1 h-full">

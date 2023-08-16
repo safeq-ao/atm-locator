@@ -3,7 +3,7 @@ import ListModeItem from './ListModeItem.vue'
 import { atms } from '../../data/atms.ts'
 </script>
 <template>
-    <div class="relative w-full h-full mt-2 bg-white">
+    <div class="relative w-full h-full mt-2">
         <ListModeItem
             v-for="(atm, index) in atms"
             :key="index"

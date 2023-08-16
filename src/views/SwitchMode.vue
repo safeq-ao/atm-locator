@@ -11,26 +11,28 @@ const list = ref(false)
 const map = ref(true)
 
 function SwitchModeToList() {
-    map.value = false
-    emit('update:mapOrList', false)
-
-    return (list.value = !list.value)
+    if (!list.value) {
+        map.value = false
+        emit('update:mapOrList', false)
+        list.value = !list.value
+    }
 }
 
 function SwitchModeToMap() {
-    list.value = false
-    emit('update:mapOrList', true)
+    if (!map.value) {
+        list.value = false
+        emit('update:mapOrList', true)
+        map.value = !map.value
+    }
 
-    return (map.value = !map.value)
+    return 'lg:mx-auto'
 }
 </script>
 
 <template>
-    <div>
-        <div class="flex w-36 h-10 bg-white border rounded-lg mx-auto mt-3">
-            <button v-on:click="SwitchModeToMap" :class="map && 'active'">Mapa</button>
-            <button v-on:click="SwitchModeToList" :class="list && 'active'">Lista</button>
-        </div>
+    <div class="flex w-36 h-10 bg-white rounded-lg mt-3">
+        <button v-on:click="SwitchModeToMap" :class="{ active: map }">Mapa</button>
+        <button v-on:click="SwitchModeToList" :class="{ active: list }">Lista</button>
     </div>
 </template>
 

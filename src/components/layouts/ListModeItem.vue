@@ -29,10 +29,10 @@ function closeShowDetails() {
 <template>
     <div
         v-on:click="toggleShowDetails(index as number)"
-        class="flex flex-col gap-3 w-full bg-[#cac4d0] mt-1 px-2 py-3"
+        class="flex flex-col gap-3 w-full mt-1 px-2 py-3 bg-white hover:bg-black900 hover:text-white hover:cursor-pointer"
     >
         <h3>{{ atmName }}</h3>
-        <div class="flex justify-between">
+        <div class="flex justify-between items-end">
             <div class="flex flex-col gap-1">
                 <p class="flex gap-2 text-gray-500">
                     <span>{{ atmDistance }} Km</span><span>{{ atmTime }} min</span>
@@ -57,9 +57,10 @@ function closeShowDetails() {
             <DirectionsButton />
         </div>
     </div>
+
     <div
         v-show="showDetails === index"
-        class="absolute top-10 left-1/2 -translate-x-1/2 flex flex-col gap-3 w-80 bg-white rounded-lg mx-auto mt-1 px-2 py-3 hidden"
+        class="absolute top-10 left-1/2 -translate-x-1/2 flex-col gap-3 w-80 bg-white rounded-lg mx-auto mt-1 px-2 py-3 hidden"
     >
         <h3>{{ atmName }}</h3>
         <div class="flex justify-between">

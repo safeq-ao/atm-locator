@@ -14,10 +14,10 @@ function SwitchModeToMapOrList() {
 </script>
 
 <template>
-    <div class="relative h-full">
-        <div class="absolute top-4 left-1/2 -translate-x-1/2 z-50">
+    <div class="h-full">
+        <div class="" :class="mapOrList ? 'absolute top-4 left-2  z-50' : 'mt-4 ms-4'">
             <SearchBar />
-            <SwitchMode @update:map-or-list="SwitchModeToMapOrList" />
+            <SwitchMode class="w-36 mx-auto sm:mx-0" @update:map-or-list="SwitchModeToMapOrList" />
         </div>
 
         <MapMode v-if="mapOrList" />

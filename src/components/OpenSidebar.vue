@@ -22,7 +22,10 @@ const closeSidebar = () => {
             <ion-icon name="menu-outline"></ion-icon>
         </div>
         <AppSidebar :open="openSidebar" @update:open="closeSidebar" />
+        <div
+            v-if="openSidebar"
+            class="overlay fixed top-0 left-0 w-full bg-black bg-opacity-20 h-full z-[999]"
+            @click="closeSidebar"
+        ></div>
     </div>
 </template>
-
-<style scoped></style>
