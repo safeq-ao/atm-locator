@@ -16,7 +16,7 @@ const closeSidebar = () => {
 <template>
     <div>
         <div
-            class="flex justify-center items-center h-12 w-12 text-2xl cursor-pointer"
+            class="flex justify-center items-center h-12 w-12 text-4xl cursor-pointer"
             v-on:click="toggleSidebar"
         >
             <ion-icon name="menu-outline"></ion-icon>

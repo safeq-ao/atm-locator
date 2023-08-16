@@ -13,6 +13,7 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@fawmi/vue-google-maps": "^0.9.79",
     "git-commit-msg-linter": "^5.0.4",
     "pinia": "^2.1.4",
     "vue": "^3.3.4",
