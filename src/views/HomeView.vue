@@ -7,7 +7,7 @@ import MapMode from '../components/layouts/MapMode.vue'
 import ListMode from '../components/layouts/ListMode.vue'
 
 
-const mapOrList = ref<boolean>(true)
+const mapOrList = ref<boolean>(false)
 
 function SwitchModeToMapOrList() {
     mapOrList.value = !mapOrList.value

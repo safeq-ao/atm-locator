@@ -1,6 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import ListModeItem from './ListModeItem.vue'
+import { atms } from '../../data/atms.ts'
+</script>
 <template>
-    <div class="w-full h-96 bg-blue-500"></div>
+    <div class="relative w-full h-full mt-2 bg-white">
+        <ListModeItem
+            v-for="(atm, index) in atms"
+            :key="index"
+            :atm-name="atm.name"
+            :horary="atm.horary"
+            :atm-distance="atm.distance"
+            :atm-time="atm.time"
+            :money-status="atm.moneyStatus"
+            :paper-status="atm.paperStatus"
+            :index="index"
+        />
+    </div>
 </template>
 
 <style scoped></style>
+../../data

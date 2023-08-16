@@ -30,7 +30,7 @@ const closeSidebar = () => {
 </script>
 
 <template>
-    <div class="fixed top-0 left-0 w-72 h-full bg-[#ccc] sidebar" :class="!open && 'hidden'">
+    <div class="fixed top-0 left-0 w-72 h-full bg-[#ccc] z-50" :class="!open && 'hidden'">
         <header class="flex justify-between items-center w-full h-20 py-8 px-4">
             <div class="flex items-center gap-2">
                 <RouterLink to="/">
