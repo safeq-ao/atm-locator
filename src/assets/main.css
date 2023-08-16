@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    @apply m-0 p-0 box-border antialiased;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    @apply relative font-normal text-sm lg:text-base leading-tight bg-black;
+}
+
+h1 {
+    @apply text-2xl lg:text-[2.5rem] leading-tight font-bold;
+}
+
+h2 {
+    @apply text-xl font-bold lg:text-3xl leading-tight;
+}
+
+h3 {
+    @apply text-xl lg:text-2xl font-bold leading-tight;
+}
+
+input,
+select,
+textarea,
+button {
+    @apply w-full py-2 px-4 text-base border-0 leading-4;
+}
+
+textarea {
+    @apply resize-none;
+}
+
+ul {
+    @apply list-none;
+}
+
+a {
+    @apply no-underline cursor-pointer;
+}

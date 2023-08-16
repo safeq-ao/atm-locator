@@ -1,14 +1,11 @@
+<script setup lang="ts">
+import SearchBar from '../components/SearchBar.vue'
+</script>
+
 <template>
     <div>
-
-        Olá
+        <SearchBar />
     </div>
 </template>
 
-<script setup lang="ts">
-
-</script>
-
-<style scoped>
-
-</style>
+<style scoped></style>
