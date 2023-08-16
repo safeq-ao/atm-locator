@@ -8,7 +8,7 @@
 }
 
 body {
-    @apply relative font-normal text-sm lg:text-base leading-tight bg-black;
+    @apply relative w-full h-full font-normal text-sm lg:text-base leading-tight bg-black;
 }
 
 h1 {
