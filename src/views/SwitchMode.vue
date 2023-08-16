@@ -34,12 +34,12 @@ function SwitchModeToMap() {
     </div>
 </template>
 
-<style>
+<style scoped>
 .active {
     @apply bg-[#ccc];
 }
 
 button {
-    @apply w-1/2 cursor-pointer rounded-lg;
+    @apply w-1/2 h-full rounded-lg cursor-pointer;
 }
 </style>

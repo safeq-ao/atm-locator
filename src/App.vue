@@ -1,6 +1,4 @@
-<script setup lang="ts">
-import HomeViewVue from './views/HomeView.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
     <RouterLink to="/" />

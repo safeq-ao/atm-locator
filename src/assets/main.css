@@ -6,6 +6,10 @@
     @apply m-0 p-0 box-border antialiased;
 }
 
+html {
+    @apply w-full h-full bg-[#f5f5f5];
+}
+
 body {
     @apply relative w-full h-full font-normal text-base lg:text-base leading-tight text-black bg-[#f5f5f5];
     /* @apply dark:bg-[#333333]:*/
@@ -50,3 +54,11 @@ section {
     @apply container 3xl:max-w-screen-2xl px-4 mx-auto;
 }
 
+#app {
+    @apply h-full;
+}
+
+.gm-control-active {
+    padding: auto !important;
+    width: 40px !important;
+}

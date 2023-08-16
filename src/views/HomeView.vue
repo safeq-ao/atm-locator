@@ -6,8 +6,7 @@ import SwitchMode from './SwitchMode.vue'
 import MapMode from '../components/layouts/MapMode.vue'
 import ListMode from '../components/layouts/ListMode.vue'
 
-
-const mapOrList = ref<boolean>(false)
+const mapOrList = ref<boolean>(true)
 
 function SwitchModeToMapOrList() {
     mapOrList.value = !mapOrList.value
@@ -15,9 +14,11 @@ function SwitchModeToMapOrList() {
 </script>
 
 <template>
-    <div>
-        <SearchBar />
-        <SwitchMode @update:map-or-list="SwitchModeToMapOrList" />
+    <div class="relative h-full">
+        <div class="absolute top-4 left-1/2 -translate-x-1/2 z-50">
+            <SearchBar />
+            <SwitchMode @update:map-or-list="SwitchModeToMapOrList" />
+        </div>
 
         <MapMode v-if="mapOrList" />
         <ListMode v-else />
