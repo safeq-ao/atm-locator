@@ -1,7 +1,26 @@
 <script setup lang="ts">
+import SidebarItem from './SidebarItem.vue'
+
 const props = defineProps({
     open: Boolean
 })
+const sidebarItems = [
+    {
+        icon: 'chatbubble-ellipses-outline',
+        title: 'Feedback',
+        route: '/feedback'
+    },
+    {
+        icon: 'information-circle-outline',
+        title: 'Sobre o App',
+        route: '/about'
+    },
+    {
+        icon: 'help-circle-outline',
+        title: 'Ajuda',
+        route: '/help'
+    }
+]
 
 const emit = defineEmits(['update:open'])
 
@@ -11,12 +30,14 @@ const closeSidebar = () => {
 </script>
 
 <template>
-    <div class="fixed top-40 left-0 w-9/12 h-full bg-[#ccc] sidebar" :class="!open && 'hidden'">
-        <header class="flex justify-between items-center w-full h-20 p-8">
-            <div class="flex items-center">
-                <div class="icon">
-                    <ion-icon name="arrow-back-outline" class="text-3xl"></ion-icon>
-                </div>
+    <div class="fixed top-0 left-0 w-72 h-full bg-[#ccc] sidebar" :class="!open && 'hidden'">
+        <header class="flex justify-between items-center w-full h-20 py-8 px-4">
+            <div class="flex items-center gap-2">
+                <RouterLink to="/">
+                    <div class="icon">
+                        <ion-icon name="arrow-back-outline" class="text-3xl"></ion-icon>
+                    </div>
+                </RouterLink>
                 <h3>ATM Locator</h3>
             </div>
             <div class="icon" v-on:click="closeSidebar">
@@ -24,6 +45,15 @@ const closeSidebar = () => {
             </div>
         </header>
         <hr class="border-black" />
+        <main>
+            <SidebarItem
+                v-for="item in sidebarItems"
+                :key="item.title"
+                :icon-name="item.icon"
+                :title="item.title"
+                :route="item.route"
+            />
+        </main>
     </div>
 </template>
 

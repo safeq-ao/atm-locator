@@ -3,7 +3,10 @@ import HomeViewVue from './views/HomeView.vue'
 </script>
 
 <template>
-    <HomeViewVue />
+    <RouterLink to="/" />
+    <RouterLink to="" />
+
+    <RouterView />
 </template>
 
 <style scoped></style>
