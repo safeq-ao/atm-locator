@@ -1,6 +1,7 @@
 <template>
     <div
         class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-3 w-72 mt-1 px-2 py-3 bg-white rounded-lg hover:cursor-pointer z-[9999] lg:w-96"
+        v-if="atm && atm"
     >
         <h3>{{ atm.name }}</h3>
         <div class="flex justify-between items-end">
@@ -31,7 +32,20 @@
 </template>
 
 <script setup lang="ts">
+interface ATM {
+    name: string
+    horary: string
+    distance: string
+    time: string
+    moneyStatus: boolean
+    paperStatus: boolean
+    position: {
+        lat: number
+        lng: number
+    }
+}
+
 const props = defineProps({
-    atm: Object
+    atm: Object as () => ATM
 })
 </script>

@@ -19,7 +19,7 @@
                 @click="showInfoWindow(i)"
                 class="relative"
             >
-                <div :class="{ hidden: selectedAtm?.name == atm.name }">
+                <div>
                     <img :src="changeSrc(i)" width="20" height="20" />
                 </div>
             </CustomMarker>
@@ -27,7 +27,7 @@
                 v-for="(atm, i) in filteredLocations"
                 :key="i"
                 v-show="infoWindowVisible"
-                :atm="selectedAtm"
+                :atm="(selectedAtm as ATM)"
             />
         </GoogleMap>
     </div>
@@ -68,7 +68,7 @@ const showInfoWindow = (index: number) => {
     setTimeout(() => {
         selectedAtm.value = null // Limpar a seleção do ATM
         infoWindowVisible.value = false // Esconder a InfoWindow
-    }, 3000) // 3 segundos
+    }, 5000) // 3 segundos
 }
 
 const hideInfoWindow = () => {
