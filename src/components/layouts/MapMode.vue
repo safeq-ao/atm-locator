@@ -24,7 +24,7 @@
     </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref } from 'vue'
 import { GoogleMap, CustomMarker } from 'vue3-google-map'
 import { FAKE_ATMS } from '../../data/atms'
