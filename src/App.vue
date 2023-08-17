@@ -4,6 +4,7 @@ import HomeView from './views/HomeView.vue';
 
 <template>
     <RouterLink to="/"></RouterLink>
+    <HomeView />
     <RouterView />
 </template>
 
