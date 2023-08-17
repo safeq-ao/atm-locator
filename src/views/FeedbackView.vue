@@ -1,7 +1,15 @@
 <template>
-    <div class="h-full w-full bg-red-600">Feedback</div>
+    <main>
+        <section>
+            <div class="section-content">
+                <OpenSidebar />
+            </div>
+        </section>
+    </main>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import OpenSidebar from '@/components/OpenSidebar.vue'
+</script>
 
 <style scoped></style>
