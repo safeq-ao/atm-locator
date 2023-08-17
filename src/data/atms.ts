@@ -199,7 +199,7 @@ export const FAKE_ATMS: ATM[] = [
     }
 ]
 
-interface ATM {
+export interface ATM {
     name: string
     horary: string
     distance: string
