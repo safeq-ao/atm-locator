@@ -9,7 +9,6 @@
             :map-type-control="true"
             :map-type-control-options="{ position: 6 }"
             :zoom-control="true"
-            zoom-control-position="4"
         >
             <CustomMarker
                 v-for="(atm, i) in locations"
