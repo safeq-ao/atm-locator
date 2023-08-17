@@ -68,7 +68,7 @@ const showInfoWindow = (index: number) => {
     setTimeout(() => {
         selectedAtm.value = null // Limpar a seleção do ATM
         infoWindowVisible.value = false // Esconder a InfoWindow
-    }, 5000) // 3 segundos
+    }, 5000)
 }
 
 const hideInfoWindow = () => {
